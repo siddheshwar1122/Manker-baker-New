@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mankar Bakery - Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Bakery, Cakes, Breads, Cookies, Manjri" name="keywords" />
+    <meta
+        content="Mankar Bakery is your local bakery in Manjri Farm, Pune. Freshly baked breads, cakes, and custom treats delivered with love."
+        name="description" />
+
+    <link href="img/favicon.ico" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <!-- Login Section -->
+    <div class="container-xxl py-5 mt-5">
+        <div class="container text-center">
+            <h3 class="mb-3">Login to Your Account</h3>
+            <p><strong>Previous Login:</strong> <span id="loginHistory">None</span></p>
+            <form id="loginForm" class="d-flex justify-content-center">
+                <input type="text" id="username" class="form-control w-25 me-2" placeholder="Enter your name"
+                    required />
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid top-bar bg-dark text-light px-0">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Career</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Privacy</a></li>
+                </ol>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square text-primary border-end" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square text-primary border-end" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn-lg-square text-primary border-end" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-lg-square text-primary" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0">Mankar Bakery</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="cart.html" class="btn btn-outline-light position-relative me-3">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+                <span id="cart-count"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </a>
+
+            <div class="d-none d-lg-flex">
+                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                    <i class="fa fa-phone text-primary"></i>
+                </div>
+                <div class="ps-3">
+                    <small class="text-primary mb-0">Call Us</small>
+                    <p class="text-light fs-5 mb-0">+91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Carousel -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-primary text-uppercase fw-bold mb-2">The Best Bakery</p>
+                                <h1 class="display-1 text-light mb-4">We Bake With Passion, Served With Love</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-primary text-uppercase fw-bold mb-2">// Fresh & Tasty</p>
+                                <h1 class="display-1 text-light mb-4">Taste the Joy of Every Bite</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facts -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded p-5">
+                        <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+                        <h5>6 Years Experience</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded p-5">
+                        <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                        <h5>4 Skilled Professionals</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded p-5">
+                        <i class="fa fa-bread-slice fa-3x text-primary mb-3"></i>
+                        <h5>21+ Products</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="bg-light rounded p-5">
+                        <i class="fa fa-cart-plus fa-3x text-primary mb-3"></i>
+                        <h5>50 Orders Daily</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer mt-5 py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Contact</h4>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Manjri Farm, Pune</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 98765 43210</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@mankarbaker.com</p>
+                </div>
+               
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="text-light mb-4">Photo Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4"><img class="img-fluid bg-light rounded p-1" src="img/product-1.jpg" alt="" />
+                        </div>
+                        <div class="col-4"><img class="img-fluid bg-light rounded p-1" src="img/product-2.jpg" alt="" />
+                        </div>
+                        <div class="col-4"><img class="img-fluid bg-light rounded p-1" src="img/product-3.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container-fluid copyright text-light py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy;
+                 Designed by
+                <strong>Siddheshwar Mankar</strong>.</p>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Login Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm");
+            const usernameInput = document.getElementById("username");
+            const loginHistory = document.getElementById("loginHistory");
+
+            const storedName = localStorage.getItem("mankar_username");
+            loginHistory.textContent = storedName ? storedName : "None";
+
+            loginForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = usernameInput.value.trim();
+                if (name) {
+                    localStorage.setItem("mankar_username", name);
+                    loginHistory.textContent = name;
+                    alert(`Welcome back, ${name}!`);
+                    usernameInput.value = "";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

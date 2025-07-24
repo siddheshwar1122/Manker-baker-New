@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>M Baker - Bakery Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries and Styles -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="container-fluid top-bar bg-dark text-light px-0">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Career</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Privacy</a></li>
+                </ol>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0">Mankar Baker</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="product.html" class="nav-item nav-link active">Products</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="d-none d-lg-flex">
+                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                    <i class="fa fa-phone text-primary"></i>
+                </div>
+                <div class="ps-3">
+                    <small class="text-primary mb-0">Call Us</small>
+                    <p class="text-light fs-5 mb-0">+91 9876543210</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="container-fluid page-header py-6">
+        <div class="container text-center pt-5 pb-3">
+            <h1 class="display-4 text-white">Products</h1>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <div class="container-xxl bg-light my-6 py-6 pt-0" style="margin: 12rem 0;">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">// Bakery Products</p>
+                <h1 class="display-6 mb-4">Explore Our Bakery Categories</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Dark Chocolate</h3>
+                            <p>₹20</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Dark Chocolate" data-price="20" data-image="img/product-1.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/product-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Wheat Cookies</h3>
+                            <p>₹59</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Wheat Cookies" data-price="59" data-image="img/product-2.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/product-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Milk Toast</h3>
+                            <p>₹35</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Milk Toast" data-price="35" data-image="img/r.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/r.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- products 4 -->
+           <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">panda cake</h3>
+                            <p>₹350</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="panda cake" data-price="350" data-image="img\a.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/a.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- product 5 -->
+              <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">chocolate cup cake</h3>
+                            <p>₹25</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="chocolate cup cake" data-price="25" data-image="img/b.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/b.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- product 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Toast</h3>
+                            <p>₹40</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Toast" data-price="40" data-image="img/i.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/i.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- product 7 -->
+                 <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Black forest cake</h3>
+                            <p>₹400</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Black forest cake" data-price="400" data-image="img/d.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/d.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+   <!--product 8  -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">donute</h3>
+                            <p>₹50</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="donute" data-price="50" data-image="img/e.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/e.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- product 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Wheat Cookies</h3>
+                            <p>₹75</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Wheat Cookies" data-price="75" data-image="img/f.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/f.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- product 10 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Milk Cookies</h3>
+                            <p>₹45</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Milk Cookies" data-price="45" data-image="img/g.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/g.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+    <!-- product 11 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Sesame butter</h3>
+                            <p>₹60</p>
+                        </div>
+                        <div class="text-center py-3">
+                            <a href="cart.html" class="btn btn-sm btn-primary"
+                               data-name="Sesame butte
+                               " data-price="60" data-image="img/k.jpg"
+                               onclick="addToCart(this)">Add to Cart</a>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" src="img/k.jpg" alt="">
+                        </div>
+                    </div>
+                </div>       
+             </div>
+        </div>
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light footer py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contact</h4>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Manjri Farm, Pune</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 9876543210</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@mankarbaker.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4"><img class="img-fluid bg-light rounded p-1" src="img/product-1.jpg" alt=""></div>
+                        <div class="col-4"><img class="img-fluid bg-light rounded p-1" src="img/product-2.jpg" alt=""></div>
+                        <div class="col-4"><img class="img-fluid bg-light rounded p-1" src="img/r.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Script -->
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function addToCart(el) {
+            const name = el.getAttribute("data-name");
+            const price = parseFloat(el.getAttribute("data-price"));
+            const image = el.getAttribute("data-image");
+
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            // Redirect via href happens automatically
+        }
+    </script>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

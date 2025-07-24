@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mankar Bakery - Cart & Invoice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #fffaf3; }
+    h1, h2 { text-align: center; color: #8b4513; }
+    .cart { max-width: 900px; margin: 30px auto; border-top: 2px solid #8b4513; padding-top: 20px; }
+    .cart-item { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 10px; border-radius: 6px; margin-bottom: 10px; }
+    .cart-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 5px; margin-right: 10px; }
+    .info { flex: 1; }
+    .quantity input { width: 40px; text-align: center; }
+    button { background: #ff9800; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; }
+    .total { text-align: right; font-size: 18px; margin-top: 10px; }
+    .empty { text-align: center; color: gray; font-size: 18px; padding: 20px; }
+    .invoice-box {
+      background: #fefefe;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🛒 Your Cart - Mankar Bakery</h1>
+
+<div class="cart">
+  <div id="cart-items"></div>
+  <div class="total">Total: ₹<span id="total">0</span></div>
+  <div style="text-align:center; margin-top: 20px;">
+    <button onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<div class="invoice-box" id="invoice" style="display: none;"></div>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function renderCart() {
+    const cartItemsEl = document.getElementById('cart-items');
+    cartItemsEl.innerHTML = '';
+    let total = 0;
+
+    if (cart.length === 0) {
+      cartItemsEl.innerHTML = '<div class="empty">Your cart is empty.</div>';
+      document.getElementById('total').textContent = '0';
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      total += item.price * item.quantity;
+
+      const itemEl = document.createElement('div');
+      itemEl.className = 'cart-item';
+      itemEl.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="info">
+          <strong>${item.name}</strong><br>
+          ₹${item.price} × 
+          <input type="number" value="${item.quantity}" min="1" onchange="updateQty(${index}, this.value)">
+        </div>
+        <button onclick="removeItem(${index})">Remove</button>
+      `;
+      cartItemsEl.appendChild(itemEl);
+    });
+
+    document.getElementById('total').textContent = total.toFixed(2);
+  }
+
+  function updateQty(index, qty) {
+    qty = parseInt(qty);
+    if (qty <= 0) {
+      cart.splice(index, 1);
+    } else {
+      cart[index].quantity = qty;
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+
+  function checkout() {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    const now = new Date();
+    const invoiceNumber = Math.floor(Math.random() * 90000) + 10000;
+    let total = 0;
+    let invoiceText = `🍰 MANKAR BAKERY\nINVOICE #${invoiceNumber}\nDate: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}\n\nItems:\n`;
+
+    cart.forEach(item => {
+      const lineTotal = item.price * item.quantity;
+      total += lineTotal;
+      invoiceText += `• ${item.name} - ₹${item.price} x ${item.quantity} = ₹${lineTotal.toFixed(2)}\n`;
+    });
+
+    invoiceText += `\n----------------------------------\nTOTAL: ₹${total.toFixed(2)}\n----------------------------------\n\nThank you for shopping with Mankar Bakery!`;
+
+    document.getElementById('invoice').textContent = invoiceText;
+    document.getElementById('invoice').style.display = 'block';
+
+    // Clear cart
+    cart = [];
+    localStorage.removeItem('cart');
+    renderCart();
+  }
+
+  renderCart();
+</script>
+
+</body>
+</html>
